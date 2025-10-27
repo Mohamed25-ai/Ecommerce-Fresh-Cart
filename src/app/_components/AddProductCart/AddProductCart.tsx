@@ -15,7 +15,8 @@ export default function AddProductCart({ id }: addToCartId) {
         if (isAdded!) {
             toast.success('Product is added successfully to your cart', {
                 className: '!max-w-full !text-[var(--main-color)] !whitespace-nowrap !sm:text-[13px] !lg:text-[25px] !font-semibold',
-            });
+                duration:2000,
+            }); 
         } else {
             toast.error('Please,Login First', {
                 className: '!max-w-full !text-[red] !whitespace-nowrap !sm:text-[13px] !lg:text-[25px] !font-semibold',
