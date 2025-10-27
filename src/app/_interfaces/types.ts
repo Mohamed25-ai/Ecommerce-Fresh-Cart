@@ -62,7 +62,6 @@ export type searchParamsProps = {
         page?: string
         ,
         status?: string,
-
     },
 };
 export type allCategoriesData = {
@@ -93,7 +92,7 @@ export type productsInWishListType = {
     data: allProductsType[];
 };
 
-export interface CartItem{
+export interface CartItem {
     count: number;
     _id: string;
     product: allProductsType;
@@ -104,7 +103,7 @@ export type allOrdersProducts = {
     cartItems: CartItem[],
     paymentMethodType: string,
     totalOrderPrice: number,
-    _id:string,
+    _id: string,
 };
-export type finalOrderType=allOrdersProducts[];
+export type finalOrderType = allOrdersProducts[];
 

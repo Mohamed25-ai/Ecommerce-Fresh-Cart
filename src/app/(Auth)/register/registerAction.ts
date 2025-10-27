@@ -18,5 +18,4 @@ export async function handlingRegisterCall(data: registerFormType) {
     else{
         return false;
     }
-    // console.log('finalRegisterCall',finalRegisterCall);
 }

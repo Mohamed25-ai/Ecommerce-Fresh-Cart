@@ -12,7 +12,7 @@ import toast from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
 
 
-export default function register() {
+export default function Register() {
   const navigateToSignIn=useRouter();
   const registerForm = useForm<registerFormType>({
     resolver: zodResolver(registerSchema),

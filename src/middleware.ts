@@ -3,8 +3,6 @@ import { NextRequest, NextResponse } from "next/server";
 
 export default async function middleware(req: NextRequest) {
     const jwt=await getToken({req});
-    console.log('reqqq',req)
-    console.log('jwt',jwt);
     if(jwt?.signInToken){
         return NextResponse.next();
     }

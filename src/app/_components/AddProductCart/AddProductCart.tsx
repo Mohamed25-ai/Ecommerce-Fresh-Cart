@@ -12,7 +12,6 @@ export default function AddProductCart({ id }: addToCartId) {
     const { addProductAction } = useContext(cartcontext);
     async function addProductCart() {
         const isAdded = await addProductAction(id);
-        console.log('isAdded', isAdded)
         if (isAdded!) {
             toast.success('Product is added successfully to your cart', {
                 className: '!max-w-full !text-[var(--main-color)] !whitespace-nowrap !sm:text-[13px] !lg:text-[25px] !font-semibold',

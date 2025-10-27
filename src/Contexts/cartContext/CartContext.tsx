@@ -62,7 +62,6 @@ export default function CartContext({ children }: { children: React.ReactNode })
             getCartUpdates();
             return updataCart;
         } catch (error) {
-            console.log(error);
         }
     };
     async function removeCartAction(id: string,counter:number) {
@@ -76,7 +75,6 @@ export default function CartContext({ children }: { children: React.ReactNode })
             }
         }
         catch (error) {
-            console.log(error);
             return;
         }
     };
@@ -91,7 +89,6 @@ export default function CartContext({ children }: { children: React.ReactNode })
                     setnavCounter(updateRes.numOfCartItems);
                 }
             }catch(error){
-                console.log(error);
             }
         }
         if(decOrInc=="dec"){
@@ -104,7 +101,6 @@ export default function CartContext({ children }: { children: React.ReactNode })
                     setnavCounter(updateRes.numOfCartItems);
                 }
             }catch(error){
-                console.log(error);
             }
         }
         
@@ -114,7 +110,6 @@ export default function CartContext({ children }: { children: React.ReactNode })
             const removedCart=await removeAllCartCall();
             
             if(removedCart){
-                console.log('numofitems',cartRes?.numOfCartItems);
                     setcartRes(undefined);
                     setcartData(undefined);
                     setcartPtoducts([]);

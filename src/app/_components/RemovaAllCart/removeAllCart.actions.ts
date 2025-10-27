@@ -17,7 +17,6 @@ export async function removeAllCartCall() {
             });
             const removeAllCartRes=await removeAllCartReq.json();
             if(removeAllCartRes.message==='success'){
-                console.log('removeAllCartRes',removeAllCartRes);
                 return true;
             }
             else{

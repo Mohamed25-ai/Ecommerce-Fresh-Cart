@@ -1,6 +1,5 @@
 'use client'
 import React, { useContext } from 'react'
-import { getCartProducts } from './cartServices'
 import CartProducts from '../_components/CartProducts/CartProducts';
 import Image from 'next/image';
 import cartImg from '@Images/0.png'
@@ -11,7 +10,7 @@ import RemovaAllCart from '../_components/RemovaAllCart/RemovaAllCart';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
-export default function page() {
+export default function Page() {
     const { cartData, cartRes, isloading,cartPtoducts } = useContext(cartcontext);
     return (
         <>

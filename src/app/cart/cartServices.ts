@@ -9,7 +9,6 @@ export async function getCartProducts() {
             },
         });
         const cartProductsReq=await cartProductsCall.json();
-        console.log('cartProductsReq',cartProductsReq);
         return cartProductsReq;
     }
     else{

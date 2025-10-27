@@ -20,7 +20,6 @@ export default   function BrandsContext({ children }: { children: ReactNode }) {
         setisLoading(true);
         try {
             const brandsData = await getBrands(page || 1);
-            console.log('brandsData',brandsData)
             setBrandsProducts(brandsData?.data || []);
             setBrandsMetaData(brandsData?.metadata || undefined);
             setisLoading(false);

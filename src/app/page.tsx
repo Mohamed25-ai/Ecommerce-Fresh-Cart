@@ -15,7 +15,6 @@ const mainSliderImages:string[]=[imageSlider1.src,imageSlider2.src,imageSlider3.
 export default async function page({searchParams}:searchParamsProps) {
   const currentPg= await Number(searchParams?.page)||1; 
   const allProductData: newAllProducts|null=await getAllProducts(currentPg);
-  console.log('allProductData',allProductData)
   const finalAllProducts:allProductsType[] = allProductData?.data ||[] ;
   const productMeta:productMetaData=allProductData?.metadata;
   const allCategories:allCategories|null=await getAllCategories();

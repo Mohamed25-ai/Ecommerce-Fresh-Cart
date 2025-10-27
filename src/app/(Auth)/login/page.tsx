@@ -12,7 +12,7 @@ import { useRouter } from 'next/navigation';
 import toast from 'react-hot-toast';
 import { ScaleLoader } from 'react-spinners';
 
-export default function login() {
+export default function Login() {
   const logInForm = useForm<logInFormType>({
       resolver: zodResolver(logInSchema),
       defaultValues: {
@@ -25,7 +25,6 @@ export default function login() {
     const {isSubmitting,isValid}=logInForm.formState;
     const logInNavigation=useRouter();
   
-  console.log('getFieldState',isSubmitting)
   async function logInHandling(data:logInFormType) {
     const logInRes=await signIn('credentials',{...data ,redirect:false});
     if(logInRes?.ok){

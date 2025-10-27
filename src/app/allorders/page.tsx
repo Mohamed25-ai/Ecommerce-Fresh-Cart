@@ -13,17 +13,15 @@ export default async function page() {
     //     return product.cartItems.map((pro)=>{return pro.product.imageCover});
     // })
     // const vcv=allOrdersProducts.map((po)=>{return po.map((a)=>{return a.product})});
-    // console.log('allOrdersProducts',allOrdersProducts);
-    // console.log('allOrdersProducts',allOrdersProducts);
-    // console.log('vcv',vcv);
     return (
         <section className=''>
-            {allOrdersData.map((order) => {
-                return <article>
-                    <div key={order._id} className="container mx-auto px-7 lg:px-15 grid grid-cols-1 ">
-                        {order.cartItems.map((item: CartItem) => (
+            {allOrdersData.map((order,i) => {
+                return <article key={order._id}>
+                    <div  className="container mx-auto px-7 lg:px-15 grid grid-cols-1 ">
+                        
+                        {order.cartItems.map((item: CartItem,i) => (
                             <div
-                                key={item._id}
+                                key={item._id??i}
                                 className="border-b-1 border-[var(--main-dark)] last:border-0 flex justify-between items-center "
                             >
                                 <figure className='flex items-center gap-4 py-2'>

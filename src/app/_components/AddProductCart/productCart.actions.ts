@@ -16,7 +16,6 @@ export async function handlingAddProductCart(id: string) {
             },
         });
         const addToCartReq = await addToCartCall.json();
-        console.log('addToCartReq', addToCartReq);
         if (addToCartReq.status == 'success') {
             return true;
         }

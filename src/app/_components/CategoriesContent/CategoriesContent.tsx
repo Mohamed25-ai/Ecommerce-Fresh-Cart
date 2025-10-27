@@ -9,7 +9,6 @@ import CATEGORYIMAGE from '@Images/0.png'
 import Link from "next/link";
 export default function CategoriesContent() {
   const { categoriesProducts, isLoading, categoriesAction, categoriesMetaData } = useContext(categoriesContext);
-  console.log('categoriesProducts', categoriesProducts)
   return (
     <>
       {isLoading && <div className='h-screen flex items-center justify-center'>

@@ -16,7 +16,6 @@ export async function createCashOrder(data: paymentData, cartid: string) {
                 }
             })
             const cashOrderRes = await cashOrderCall.json();
-            console.log('cashOrderRes', cashOrderRes);
             return cashOrderRes.status;
         } catch (error) {
             return null;
@@ -37,7 +36,6 @@ export async function createCreditOrder(data: paymentData, cartid: string) {
                 }
             })
             const creditOrderRes = await creditOrderCall.json();
-            console.log('creditOrderRes', creditOrderRes);
             return creditOrderRes;
 
         } catch (error) {

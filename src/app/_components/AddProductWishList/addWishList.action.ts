@@ -18,10 +18,8 @@ export async function addToWishListReq(id: string) {
                 }
             });
             const addWishListRes = await addWishListReq.json();
-            console.log('addWishListRes', addWishListRes);
             return addWishListRes;
         } catch (error) {
-            console.log(error);
         }
     }
     return null;
@@ -37,7 +35,6 @@ export async function deleteWishList(id: string) {
                 }
             });
             const deletedProduct=await deleteProductWishList.json();
-            console.log('deletedProduct',deletedProduct);
             return deletedProduct;
         } catch (error) {
             
@@ -56,7 +53,6 @@ export async function getWishList() {
             const wishListProductsRes=await wishListProducts.json();
             return wishListProductsRes;
         } catch (error) {
-            console.log(error);
         }
     }
 }

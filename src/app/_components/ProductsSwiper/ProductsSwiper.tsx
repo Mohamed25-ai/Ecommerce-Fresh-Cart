@@ -11,15 +11,12 @@ import Image from 'next/image';
 
 export default function ProductsSwiper({  slidesPerViewLg=1, slidesPerViewSm=4,spaceBetweenImges = 50, slidersnumber = 1, swiperObject ,withAutoPlay=false, withPagination= false, height='h-[200px]',autoPlaySpeed=100,imageBorderRadious="" }: swiperType) {
 
-    // console.log('images', swiperImges)
     return (
         <>
             <div className=''>
                 <Swiper 
                     spaceBetween={spaceBetweenImges}
                     slidesPerView={slidersnumber}
-                    // onSlideChange={() => console.log('slide change')}
-                    // onSwiper={(swiper) => console.log(swiper)}
                     modules={withAutoPlay&&withPagination? [Autoplay,Pagination] : [Autoplay]}
                     pagination={withPagination ? { clickable: true, el:'.myPagination' } : { clickable: false }}
                     autoplay={withAutoPlay}

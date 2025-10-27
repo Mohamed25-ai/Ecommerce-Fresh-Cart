@@ -18,7 +18,6 @@ export async function updateCartCount(id:string,count:number) {
         })
         const updateCountRes=await updateCount.json();
         if(updateCountRes.status=='success'){
-            console.log('updateCountRes',updateCountRes);
             return updateCountRes;
         }
         else{
