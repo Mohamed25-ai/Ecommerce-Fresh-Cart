@@ -3,9 +3,12 @@ import Image from 'next/image';
 import CATEGORYIMAGE from '@Images/0.png'
 import { brandsDetailsType } from './brandsDetails.types';
 import { getSpecificBrand } from '../brandsDetails.services';
-export default async function page({ params }: brandsDetailsType) {
+type BrandsDetailsPageProps = {
+  params: { id: string };
+  searchParams?: { [key: string]: string | string[] | undefined };
+};
+export default async function page({ params }: BrandsDetailsPageProps) {
     const brandsData = await getSpecificBrand(params?.id);
-    console.log('brandsData', brandsData);
     return (
         <figure className=' lg:flex justify-between items-center  container mx-auto h-screen'>
             <div className=' lg:w-1/2 relative  h-[250px]'>

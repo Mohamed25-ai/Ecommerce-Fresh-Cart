@@ -2,17 +2,14 @@ import { getAuthenticatedToken } from '@/Utilities/getUserToken'
 import { jwtDecode } from 'jwt-decode';
 import React from 'react'
 import { getUserOrders } from './allorders.services';
-import { allOrdersProducts, CartItem, finalOrderType } from '../_interfaces/types';
+import { CartItem, finalOrderType } from '../_interfaces/types';
 import Image from 'next/image';
 
 export default async function page() {
     const allOrdersToken = await getAuthenticatedToken();
     const decodedToken: { id: string } = jwtDecode(allOrdersToken as string);
     const allOrdersData: finalOrderType = await getUserOrders(decodedToken?.id);
-    // const allOrdersProducts=allOrdersData.map((product)=>{
-    //     return product.cartItems.map((pro)=>{return pro.product.imageCover});
-    // })
-    // const vcv=allOrdersProducts.map((po)=>{return po.map((a)=>{return a.product})});
+
     return (
         <section className=''>
             {allOrdersData.map((order,i) => {
