@@ -1,8 +1,6 @@
 import {  allCategoriesData } from "../_interfaces/types";
 
-export type productPropsType = {
-    params: { id: string };
-}
+
 
 export type swiperImgName={
     swiperImges?:string,
@@ -21,3 +19,9 @@ export type swiperType = {
     slidesPerViewLg?:number,
     
 }
+export type ProductParams = { id: string };
+
+export type productPropsType = {
+    params: Promise<ProductParams>;
+    searchParams?: Promise<Record<string, string | string[] | undefined>>;
+};

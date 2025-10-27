@@ -1,5 +1,5 @@
-export type categoryDetailsType={
-    params:{
-        id:string,
+export type categoryDetailsType = {
+    params: {
+        id: string,
     },
 }

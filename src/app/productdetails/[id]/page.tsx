@@ -8,8 +8,8 @@ import AddProductWishList from '@/app/_components/AddProductWishList/AddProductW
 import ProductDetailsWishIcon from '@/app/_components/ProductDetailsWishIcon/ProductDetailsWishIcon';
 
 
-export default async function page(prop: productPropsType) {
-    const { id } = prop.params;
+export default async function page({ params }: productPropsType) {
+    const { id } =await params;
 
     async function getSpecificProduct(): Promise<allProductsType | null> {
         try {
