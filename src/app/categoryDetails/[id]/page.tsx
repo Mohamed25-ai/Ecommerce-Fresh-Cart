@@ -3,8 +3,18 @@ import { categoryDetailsType } from './categoryDetails.types'
 import { getSpecificCategorie } from '../categorie.servise';
 import Image from 'next/image';
 import CATEGORYIMAGE from '@Images/0.png'
-export default async function page({params}:categoryDetailsType) {
-  const categorieData=await getSpecificCategorie(params?.id);
+
+type Params = { id: string };
+type SearchParams = Record<string, string | string[] | undefined>;
+
+export default async function page({
+  params,
+}: {
+  params: Promise<Params>;
+  searchParams?: Promise<SearchParams>;
+}) {
+  const { id } = await params;
+  const categorieData=await getSpecificCategorie(id);
   console.log('categorieData',categorieData);
   return (
     <figure className=' lg:flex justify-between items-center  container mx-auto h-screen'>

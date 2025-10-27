@@ -58,11 +58,10 @@ export type newAllProducts = {
 
 export type searchParamsProps = {
 
-    searchParams?: {
-        page?: string
-        ,
-        status?: string,
-    },
+    searchParams?: Promise<{
+        page?: string;
+        status?: string | string[];
+    }>;
 };
 export type allCategoriesData = {
     _id: string,
