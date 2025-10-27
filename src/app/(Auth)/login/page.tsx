@@ -63,7 +63,7 @@ export default function Login() {
               <FormItem>
                 <FormLabel className='text-[16px] text-[var(--main-color)]'>Email:</FormLabel>
                 <FormControl >
-                  <Input className='focus-visible:ring-[2px] border-[var(--main-pale)] focus-visible:ring-[var(--main-color)] focus-visible:border-[var(--main-color)]' type='email' placeholder="Enter Your Name" {...field} />
+                  <Input className='focus-visible:ring-[2px] border-[var(--main-pale)] focus-visible:ring-[var(--main-color)] focus-visible:border-[var(--main-color)]' type='email' placeholder="Enter Your Email" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -76,7 +76,7 @@ export default function Login() {
               <FormItem>
                 <FormLabel className='text-[16px] text-[var(--main-color)]'>Password:</FormLabel>
                 <FormControl >
-                  <Input className='focus-visible:ring-[2px] border-[var(--main-pale)] focus-visible:ring-[var(--main-color)] focus-visible:border-[var(--main-color)]' type='password' placeholder="Enter Your Name" {...field} />
+                  <Input className='focus-visible:ring-[2px] border-[var(--main-pale)] focus-visible:ring-[var(--main-color)] focus-visible:border-[var(--main-color)]' type='password' placeholder="Enter Your Password" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
